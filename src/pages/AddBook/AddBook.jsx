@@ -8,6 +8,7 @@ import {
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+import Layout from "../../components/Layout/Layout";
 import BookForm from "../../components/books/BookForm";
 import BookPreview from "../../components/books/BookPreview";
 import { createBook } from "../../services/bookService";
@@ -131,58 +132,60 @@ const AddBook = () => {
     };
 
     return (
-        <main className="add-book-page py-5">
-            <Container>
-                <div className="add-book-heading mb-4">
-                    <p className="text-primary fw-semibold mb-1">
-                        Library Management System
-                    </p>
+        <Layout>
+            <main className="add-book-page py-5">
+                <Container>
+                    <div className="add-book-heading mb-4">
+                        <p className="text-primary fw-semibold mb-1">
+                            Library Management System
+                        </p>
 
-                    <h1 className="mb-2">Add a New Book</h1>
+                        <h1 className="mb-2">Add a New Book</h1>
 
-                    <p className="text-muted mb-0">
-                        Enter the book information and review the preview
-                        before saving.
-                    </p>
-                </div>
+                        <p className="text-muted mb-0">
+                            Enter the book information and review the preview
+                            before saving.
+                        </p>
+                    </div>
 
-                {successMessage && (
-                    <Alert variant="success" role="status">
-                        {successMessage}
-                    </Alert>
-                )}
+                    {successMessage && (
+                        <Alert variant="success" role="status">
+                            {successMessage}
+                        </Alert>
+                    )}
 
-                <Row className="g-4">
-                    <Col lg={8}>
-                        <Card className="book-form-card shadow-sm">
-                            <Card.Body className="p-4">
-                                <Card.Title className="mb-4">
-                                    Book Information
-                                </Card.Title>
+                    <Row className="g-4">
+                        <Col lg={8}>
+                            <Card className="book-form-card shadow-sm">
+                                <Card.Body className="p-4">
+                                    <Card.Title className="mb-4">
+                                        Book Information
+                                    </Card.Title>
 
-                                <BookForm
-                                    book={book}
-                                    errors={errors}
-                                    apiError={apiError}
-                                    isSubmitting={isSubmitting}
-                                    onChange={handleChange}
-                                    onSubmit={handleSubmit}
-                                    onCancel={handleCancel}
-                                />
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                                    <BookForm
+                                        book={book}
+                                        errors={errors}
+                                        apiError={apiError}
+                                        isSubmitting={isSubmitting}
+                                        onChange={handleChange}
+                                        onSubmit={handleSubmit}
+                                        onCancel={handleCancel}
+                                    />
+                                </Card.Body>
+                            </Card>
+                        </Col>
 
-                    <Col lg={4}>
-                        <div className="book-preview-sticky">
-                            <h2 className="h5 mb-3">Live Preview</h2>
+                        <Col lg={4}>
+                            <div className="book-preview-sticky">
+                                <h2 className="h5 mb-3">Live Preview</h2>
 
-                            <BookPreview book={book} />
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </main>
+                                <BookPreview book={book} />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
+        </Layout>
     );
 };
 

@@ -15,12 +15,12 @@ const currentYear = new Date().getFullYear();
 export const validateBook = (book) => {
     const errors = {};
 
-    const title = book.title.trim();
-    const author = book.author.trim();
-    const publisher = book.publisher.trim();
-    const isbn = book.isbn.trim();
-    const image = book.image.trim();
-    const description = book.description.trim();
+    const title = (book.title || "").trim();
+    const author = (book.author || "").trim();
+    const publisher = (book.publisher || "").trim();
+    const isbn = (book.isbn || "").trim();
+    const image = (book.image || "").trim();
+    const description = (book.description || "").trim();
 
     if (!title) {
         errors.title = "Book title is required.";

@@ -1,0 +1,81 @@
+.add-book-page {
+    min-height: calc(100vh - 120px);
+    background-color: #f5f7fb;
+}
+
+.add-book-heading h1 {
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.book-form-card {
+    border: none;
+    border-radius: 16px;
+}
+
+.book-form-card .form-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.book-form-card .form-control,
+.book-form-card .form-select {
+    min-height: 46px;
+    border-radius: 9px;
+}
+
+.book-form-card textarea.form-control {
+    min-height: 130px;
+}
+
+.book-form-card .form-control:focus,
+.book-form-card .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+.book-preview-sticky {
+    position: sticky;
+    top: 90px;
+}
+
+.book-preview-card {
+    overflow: hidden;
+    border: none;
+    border-radius: 16px;
+}
+
+.book-preview-image-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    background-color: #eef2f7;
+}
+
+.book-preview-image {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-preview-information p {
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.book-preview-description {
+    display: -webkit-box;
+    margin-top: 16px;
+    overflow: hidden;
+    color: #6b7280;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 991.98px) {
+    .book-preview-sticky {
+        position: static;
+    }
+}
