@@ -4,6 +4,7 @@ import About from '../pages/About/About';
 import NotFound from '../pages/NotFound/NotFound';
 import Layout from '../components/Layout/Layout';
 import AddBook from '../pages/AddBook/AddBook';
+import BookDetail from '../pages/BookDetail/BookDetail';
 
 /**
  * Placeholder component for pages to be implemented by other team members.
@@ -27,8 +28,8 @@ function PlaceholderPage({ icon, title, message }) {
  * Routes:
  * /           → Home page
  * /books      → Book List (placeholder - Member 2)
- * /books/:id  → Book Detail (placeholder - Member 3)
- * /add-book   → Add Book (placeholder - Member 4)
+ * /books/:id  → Book Detail (Member 3)
+ * /add-book   → Add Book (Member 4)
  * /edit-book/:id → Edit Book (placeholder - Member 5)
  * /about      → About page
  * *           → 404 Not Found
@@ -51,17 +52,9 @@ function AppRoutes() {
         }
       />
 
-      {/* Book Detail - To be implemented by Member 3 */}
-      <Route
-        path="/books/:id"
-        element={
-          <PlaceholderPage
-            icon="🔍"
-            title="Book Detail"
-            message="Book Detail will be implemented by Member 3"
-          />
-        }
-      />
+      {/* Book Detail - Implemented by Member 3 */}
+      <Route path="/books/:id" element={<BookDetail />} />
+
 
       {/* Add Book - To be implemented by Member 4 */}
       <Route path="/add-book" element={<AddBook />} />
