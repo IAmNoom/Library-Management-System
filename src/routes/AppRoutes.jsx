@@ -5,6 +5,7 @@ import NotFound from '../pages/NotFound/NotFound';
 import Layout from '../components/Layout/Layout';
 import AddBook from '../pages/AddBook/AddBook';
 import BookDetail from '../pages/BookDetail/BookDetail';
+import Favorites from '../pages/Favorites/Favorites';
 
 /**
  * Placeholder component for pages to be implemented by other team members.
@@ -29,6 +30,7 @@ function PlaceholderPage({ icon, title, message }) {
  * /           → Home page
  * /books      → Book List (placeholder - Member 2)
  * /books/:id  → Book Detail (Member 3)
+ * /favorites  → Favorites List
  * /add-book   → Add Book (Member 4)
  * /edit-book/:id → Edit Book (placeholder - Member 5)
  * /about      → About page
@@ -54,6 +56,10 @@ function AppRoutes() {
 
       {/* Book Detail - Implemented by Member 3 */}
       <Route path="/books/:id" element={<BookDetail />} />
+
+      {/* Favorites List */}
+      <Route path="/favorites" element={<Favorites />} />
+
 
 
       {/* Add Book - To be implemented by Member 4 */}

@@ -566,3 +566,32 @@ body {
   font-size: 0.98rem;
 }
 
+/* ---------- Favorites Page ---------- */
+.favorites-page {
+  min-height: calc(100vh - 160px);
+  background-color: #f8fafc;
+}
+
+.favorite-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.empty-favorites-container {
+  border: 1px dashed #cbd5e1;
+}
+
+.empty-favorites-icon {
+  animation: heartPulse 2s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+

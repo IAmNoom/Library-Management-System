@@ -43,11 +43,12 @@ function Navbar() {
 
           {/* Right-side favorite counter */}
           <Nav>
-            <Nav.Link className="favorite-badge" disabled>
+            <Nav.Link as={NavLink} to="/favorites" className="favorite-badge">
               ❤️ Favorite Books{' '}
               <span className="favorite-count">{favoriteCount}</span>
             </Nav.Link>
           </Nav>
+
         </BsNavbar.Collapse>
       </Container>
     </BsNavbar>
