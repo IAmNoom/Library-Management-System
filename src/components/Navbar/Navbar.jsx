@@ -33,6 +33,9 @@ function Navbar() {
             <Nav.Link as={NavLink} to="/books">
               Books
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/add-book">
+              Add Book
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/about">
               About
             </Nav.Link>

@@ -3,6 +3,7 @@ import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
 import NotFound from '../pages/NotFound/NotFound';
 import Layout from '../components/Layout/Layout';
+import AddBook from '../pages/AddBook/AddBook';
 
 /**
  * Placeholder component for pages to be implemented by other team members.
@@ -63,16 +64,7 @@ function AppRoutes() {
       />
 
       {/* Add Book - To be implemented by Member 4 */}
-      <Route
-        path="/add-book"
-        element={
-          <PlaceholderPage
-            icon="➕"
-            title="Add Book"
-            message="Add Book will be implemented by Member 4"
-          />
-        }
-      />
+      <Route path="/add-book" element={<AddBook />} />
 
       {/* Edit Book - To be implemented by Member 5 */}
       <Route
